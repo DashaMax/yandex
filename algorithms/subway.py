@@ -31,9 +31,10 @@ def test():
     assert subway(1, 3, 3, 2) == (5, 7)
     assert subway(1, 7, 9, 2) == (17, 19)
     assert subway(1, 2, 2, 1) == (3, 5)
+    assert subway(1, 1, 1000, 999) == (1999, 1999)
     assert subway(1, 5, 1, 2) == -1
     assert subway(4, 1, 5, 3) == -1
 
 
 if __name__ == '__main__':
-    main()
+    test()
