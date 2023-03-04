@@ -5,8 +5,8 @@ def is_throw_away(*args: int) -> str:
     a, b, c, d, e = args
 
     if max((a, b)) <= max((d, e)) and min((a, b)) <= min((d, e)) or \
-            max((a, c)) <= max((d, e)) and min((a, c)) <= min((d, e)) or \
-            max((b, c)) <= max((d, e)) and min((b, c)) <= min((d, e)):
+       max((a, c)) <= max((d, e)) and min((a, c)) <= min((d, e)) or \
+       max((b, c)) <= max((d, e)) and min((b, c)) <= min((d, e)):
         return 'YES'
     return 'NO'
 
