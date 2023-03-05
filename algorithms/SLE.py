@@ -3,6 +3,42 @@ from random import randint
 
 def is_round(n: float) -> (int, float):
     return round(n, 5) if n * 10 % 10 else int(n)
+    # return round(n, 5)
+
+
+# def sle(*args: str) -> (int, tuple):
+#     a, b, c, d, e, f = (int(x) if x.isdigit() else float(x) for x in args)
+#     detA = a * d - b * c
+#
+#     if detA:
+#         Aobr = ((d / detA, -b / detA), (-c / detA, a / detA))
+#         x = is_round(Aobr[0][0] * e + Aobr[0][1] * f)
+#         y = is_round(Aobr[1][0] * e + Aobr[1][1] * f)
+#         return 2, x, y
+#
+#     elif a == b == c == d == e == f == 0:
+#         return 5
+#
+#     elif a == b == 0 != e or c == d == 0 != f:
+#         return 0
+#
+#     elif a * d == b * c != 0 and e * d == f * b != 0:
+#         return 1, is_round(-a / b), is_round(e / b)
+#
+#     elif a == c == 0 and e * d == f * b:
+#         if b:
+#             return 4, is_round(e / b)
+#         return 4, is_round(f / d)
+#
+#     elif b == d == 0 and e * c == f * a:
+#         if a:
+#             return 3, is_round(e / a)
+#         return 3, is_round(f / c)
+#
+#     elif (a == b == e == 0 and c and d) or (c == d == f == 0 and a and b):
+#         return 5
+#
+#     return 0
 
 
 def sle(*args: str) -> (int, tuple):
