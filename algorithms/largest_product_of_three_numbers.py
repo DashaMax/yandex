@@ -27,7 +27,7 @@ def get_nums(a: list) -> tuple:
         else:
             max_2, max_3 = a[0], a[1]
 
-    min_1, min_2, min_3 = max_3, max_2, max_1
+    min_1, min_2 = max_3, max_2
 
     for i in range(3, len(a)):
         if a[i] >= max_1:
@@ -37,15 +37,13 @@ def get_nums(a: list) -> tuple:
         elif a[i] > max_3:
             max_3 = a[i]
         elif a[i] < min_1:
-            min_1, min_2, min_3 = a[i], min_1, min_2
+            min_1, min_2 = a[i], min_1
         elif a[i] < min_2:
-            min_2, min_3 = a[i], min_2
-        elif a[i] < min_3:
-            min_3 = a[i]
+            min_2 = a[i]
 
-    if max_1 * max_2 * max_3 >= min_1 * min_2 * min_3 and max_1 * max_2 * max_3 >= max_1 * min_1 * min_2:
+    if max_1 * max_2 * max_3 >= max_1 * min_1 * min_2:
         return max_1, max_2, max_3
-    elif max_1 * min_1 * min_2 >= max_1 * max_2 * max_3 and max_1 * min_1 * min_2 >= min_1 * min_2 * min_3:
+    elif max_1 * min_1 * min_2 >= max_1 * max_2 * max_3:
         return max_1, min_1, min_2
 
 
