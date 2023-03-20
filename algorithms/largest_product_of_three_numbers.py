@@ -45,8 +45,6 @@ def get_nums(a: list) -> tuple:
 
     if max_1 * max_2 * max_3 >= min_1 * min_2 * min_3 and max_1 * max_2 * max_3 >= max_1 * min_1 * min_2:
         return max_1, max_2, max_3
-    elif min_1 * min_2 * min_3 >= max_1 * max_2 * max_3 and min_1 * min_2 * min_3 >= max_1 * min_1 * min_2:
-        return min_1, min_2, min_3
     elif max_1 * min_1 * min_2 >= max_1 * max_2 * max_3 and max_1 * min_1 * min_2 >= min_1 * min_2 * min_3:
         return max_1, min_1, min_2
 
