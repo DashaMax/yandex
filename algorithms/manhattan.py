@@ -10,11 +10,6 @@ def get_coords_t(t: int, coords: tuple) -> set:
             if abs(i) + abs(j) <= t:
                 coords_t.add((coords[0] + i, coords[1] + j))
 
-            # coords_t.add((coords[0] - t + i, coords[1] - j))
-            # coords_t.add((coords[0] - t + i, coords[1] + j))
-            # coords_t.add((coords[0] + t - i, coords[1] - j))
-            # coords_t.add((coords[0] + t - i, coords[1] + j))
-
     return coords_t
 
 
